@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import simpleGit from "simple-git";
 import path from "path";
-import dotenv from "dotenv";
 import { createClient } from "redis";
 
 
@@ -10,7 +9,6 @@ import { generateID } from "./functions";
 import { getAllFiles } from "./files";
 import { uploadFile } from "./aws"
 
-dotenv.config();
 
 const publisher = createClient();
 publisher.connect();
